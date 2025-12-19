@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Remove default Card content padding */
+.log-card .p-card-body {
+  padding: 0;
+}
+
+.log-card .p-card-content {
+  height: 100%;
+  display: flex;
+}
+
