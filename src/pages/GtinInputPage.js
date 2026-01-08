@@ -18,7 +18,7 @@ export default function GtinInputPage() {
     /* =========================
        STATE
     ========================= */
-    const [apiKey, setApiKey] = useState("");
+    const [apiKey, setApiKey] = useState("31");
     const [gtin, setGtin] = useState("");
 
     const [marketplace, setMarketplace] = useState("US");
@@ -78,7 +78,7 @@ export default function GtinInputPage() {
             setLoading(true);
             setLogText("⏳ Analyzing product...\n");
 
-            const res = await fetch("http://127.0.0.1:5000/api/analyze", {
+            const res = await fetch("http://ec2-18-221-85-19.us-east-2.compute.amazonaws.com:5000/api/analyze", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
