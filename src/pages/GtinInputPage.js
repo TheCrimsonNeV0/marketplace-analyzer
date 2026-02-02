@@ -78,7 +78,8 @@ export default function GtinInputPage() {
             setLoading(true);
             setLogText("⏳ Analyzing product...\n");
 
-            const res = await fetch("http://ec2-18-221-85-19.us-east-2.compute.amazonaws.com:5000/api/analyze", {
+            //const res = await fetch("http://ec2-18-221-85-19.us-east-2.compute.amazonaws.com:5000/api/analyze", {
+            const res = await fetch("https://throbbing-disk-57b2.nevzatumut2001.workers.dev/api/analyze", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(payload)
